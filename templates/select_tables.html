@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+Select {{table_name}}
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col">
+        <a href="/">
+            <button class="btn btn-primary btn-lg custom-size">&#8701; Back</button>
+        </a>
+    </div>
+</div>
+
+{% if data %}
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            {% for headline in data.headlines %}
+            <th scope="col">
+                <div class="text-center">{{ headline }}</div>
+            </th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in data.rows %}
+        <tr>
+            {% for field in row %}
+            <td scope="col">
+                <div class="text-center">{{ field }}</div>
+
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% else %}
+<div class="row">
+    <div class="col text-center"> К сожалению таблицы <b>{{table_name}}</b> не существует</div>
+</div>
+{% endif %}
+
+
+{% endblock %}
+

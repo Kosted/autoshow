@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col">
+        <a href="/filials">
+            <button class="btn btn-primary btn-lg custom-size">Filials</button>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/select_table">
+            <button class="btn btn-primary btn-lg custom-size">select_table</button>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/another2">
+            <button class="custom-size  btn btn-primary btn-lg ">Another2</button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="mx-auto">
+        <form method="post">
+            <label for="table_name">Название таблицы</label>
+            <input id="table_name" name="table_name" class="form-control">
+            <button class="btn btn-primary" type="submit">Показать содержимое</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+
+

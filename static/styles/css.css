@@ -1,0 +1,18 @@
+button.custom-size{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 50px;
+    width: 150px;
+}
+
+ul{
+    margin-top: 50px;
+}
+
+li{
+    font-size: 14px;
+}
+
+div .table-row{
+    height: 40px;
+}
